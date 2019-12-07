@@ -1,0 +1,21 @@
+<h3>Add comment</h3>
+
+<%= form_with(model: [ @post, @post.comments.build ], local: true) do |f| %>
+
+<p>
+<%= f.label :username %>
+<%= f.text_field :username , :class => 'form-control' %>
+
+</p>
+
+<p>
+<%= f.label :body %>
+<%= f.text_area :body , :class => 'form-control' %>
+
+</p>
+
+<p>
+<%= f.submit ({:class => 'btn btn-secondary'})%>
+</p>
+
+<% end %>
